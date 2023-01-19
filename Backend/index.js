@@ -62,7 +62,7 @@ app.post("/login", async (req, res) => {
                 if (result) {
 
                     const token = jwt.sign({ "userID": user[0]._id }, 'hush');
-                    res.send({ "massege": "Login successfull", "token is": token })
+                    res.send({ "massege": "Login successfull", "token": token })
                 }
                 else {
                     res.send("Login failed")
